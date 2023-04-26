@@ -10,7 +10,8 @@ namespace fpenafielExamen
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //Llamo a la ventana de login
+            MainPage = new NavigationPage(new login());
         }
 
         protected override void OnStart()

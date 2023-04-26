@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fpenafielExamen.resumen">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <!--capturo el usuario de login-->
+            
+            <!--creo un nuevo grid-->
+                <Grid>
+                    <!--defino las filas-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--defino las columnas-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!--elementos del grid-->
+                    <Label Text="Cliente:" TextColor="DarkBlue" FontSize="15" FontFamily="cambria" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="" x:Name="lblNomb_cliente" FontSize="15" FontAttributes="Bold" FontFamily="cambria" TextColor="DarkBlue" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Total a pagar:" TextColor="DarkBlue" FontSize="15" FontFamily="cambria" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="" x:Name="lblTotal" FontSize="15" FontAttributes="Bold" FontFamily="cambria" TextColor="DarkBlue" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+
+
+                </Grid>
+            
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

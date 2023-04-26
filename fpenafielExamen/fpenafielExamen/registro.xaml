@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fpenafielExamen.registro">
+    <ContentPage.Content>
+        <ScrollView> <!--habilito el scroll en la ventana-->
+        <StackLayout>
+            <!--label donde se almacenara la variable que envia el login (usuario)-->
+            <Label Text=" " x:Name="lblSaludo" FontSize="15" FontAttributes="Bold" FontFamily="cambria" TextColor="DarkBlue" HorizontalTextAlignment="Center"/> 
+            
+            <!--creo un nuevo grid-->
+                <Grid>
+                    <!--defino las filas del grid-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--defino las columnas del grid-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!--elementos del grid-->
+                    <Label Text="Nombre:" TextColor="DarkBlue" FontSize="15" FontFamily="cambria" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="txtNombre" FontSize="15" FontFamily="cambria" Placeholder="INGRESE NOMBRE" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Monto Inicial:" TextColor="DarkBlue" FontSize="15" FontFamily="cambria" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="txtmontoin" FontSize="15" FontFamily="cambria" Placeholder="MONTO INICIAL" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+                    <Label Text="Pago Mensual:" TextColor="DarkBlue" FontSize="15" FontFamily="cambria" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="txtPago" FontSize="15" FontFamily="cambria" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
+                    
+                    <!--botones de calcular y limpiar-->
+                    <Button x:Name="btnCalcular" BackgroundColor="DarkSlateBlue" Text="CALCULAR" FontSize="15" TextColor="WhiteSmoke" Clicked="btnCalcular_Clicked" Grid.Row="3" Grid.Column="0"/>
+                    <Button x:Name="btnLimpiar" BackgroundColor="DarkSlateBlue" Text="LIMPIAR" FontSize="15" TextColor="WhiteSmoke" Clicked="btnLimpiar_Clicked" Grid.Row="3" Grid.Column="1"/>
+
+                </Grid>
+            <!--boton guardar-->
+                <Button x:Name="btnGuardar" BackgroundColor="DarkSlateBlue" Text="GUARDAR" FontSize="15" TextColor="WhiteSmoke" Clicked="btnGuardar_Clicked_1"/>
+            </StackLayout>
+        </ScrollView> <!--cierro el scroll de la ventana-->
+    </ContentPage.Content>
+</ContentPage>

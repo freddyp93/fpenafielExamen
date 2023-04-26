@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fpenafielExamen.login">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--agrego la imagen de cabecera-->
+            <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png" WidthRequest="100" HeightRequest="90"/>
+            
+            <Label Text="BIENVENID@ A CURSOS ONLINE" FontSize= "Title" FontFamily="cambria" FontAttributes="Bold" TextColor="DarkBlue" HorizontalTextAlignment="Center"/>
+            
+            <!--agrego un grid-->
+            <Grid>
+                <!--defino las filas del grid-->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <!--defino las columnas del grid-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <!--elementos del grid-->
+                <Image Source="https://cdn-icons-png.flaticon.com/512/16/16363.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtusuario" FontFamily="cambria" FontSize="15" Placeholder="INGRESE USUARIO" Grid.Row="0" Grid.Column="1"/>
+
+                <Image Source="https://www.buscopng.com/wp-content/uploads/2020/09/Llave.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtclave" FontFamily="cambria" FontSize="15" Placeholder="INGRESE SU CLAVE" IsPassword="true" Grid.Row="1" Grid.Column="1"/>
+                
+            </Grid>
+            
+            <!--boton de acceso-->
+            <Button x:Name="btnIngresar" FontFamily="cambria" BackgroundColor="DarkSlateBlue" Text="INGRESAR" FontSize="15" TextColor="WhiteSmoke" Clicked="btnIngresar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
